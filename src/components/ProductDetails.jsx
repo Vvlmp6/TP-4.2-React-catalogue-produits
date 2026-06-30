@@ -1,14 +1,16 @@
-function ProductDetails() {
+function ProductDetails({ product, isFavorite, onAddToCart }) {
   return (
     <section className="product-details">
       <h2>Produit mis en avant</h2>
       <div className="details-card">
-        <h3>Ordinateur portable</h3>
-        <p>
-          Un ordinateur performant pour le développement web, les projets
-          étudiants et le travail quotidien.
-        </p>
-        <p>Prix : 899 €</p>
+        <h3>{product.name}</h3>
+        <p>{product.description}</p>
+        <p>Catégorie : {product.category}</p>
+        <strong>Prix : {product.price} €</strong>
+        {isFavorite && <p>⭐ Ce produit est dans vos favoris.</p>}
+        <button onClick={() => onAddToCart(product)}>
+          Ajouter au panier
+        </button>
       </div>
     </section>
   )

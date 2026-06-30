@@ -1,27 +1,30 @@
 import ProductCard from './ProductCard'
 
-function ProductList() {
+function ProductList({ products, selectedProductId, favoriteProductId, onSelectProduct, onToggleFavorite }) {
   return (
     <section className="product-list">
       <h2>Nos produits</h2>
       <div className="products-grid">
         <ProductCard
-          name="Ordinateur portable"
-          price={899}
-          category="Informatique"
-          image="https://placehold.co/300x200?text=Ordinateur"
+          product={products[0]}
+          isSelected={selectedProductId === products[0].id}
+          isFavorite={favoriteProductId === products[0].id}
+          onSelectProduct={onSelectProduct}
+          onToggleFavorite={onToggleFavorite}
         />
         <ProductCard
-          name="Souris sans fil"
-          price={29}
-          category="Accessoires"
-          image="https://placehold.co/300x200?text=Souris"
+          product={products[1]}
+          isSelected={selectedProductId === products[1].id}
+          isFavorite={favoriteProductId === products[1].id}
+          onSelectProduct={onSelectProduct}
+          onToggleFavorite={onToggleFavorite}
         />
         <ProductCard
-          name="Casque Triton"
-          price={79}
-          category="Accessoires"
-          image="https://placehold.co/300x200?text=Casque"
+          product={products[2]}
+          isSelected={selectedProductId === products[2].id}
+          isFavorite={favoriteProductId === products[2].id}
+          onSelectProduct={onSelectProduct}
+          onToggleFavorite={onToggleFavorite}
         />
       </div>
     </section>
