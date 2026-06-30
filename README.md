@@ -26,3 +26,28 @@ ProductList.
 
 8. Parent principal de toute l'application ?
 app
+
+# TP 5 - Catalogue interactif
+
+Questions de comprehension
+
+1. Difference entre une prop et un state ?
+Une prop est recue du parent et ne change pas un state est interne et peut changer
+
+2. Pourquoi selectedProduct est dans App ?
+Parce que plusieurs composants en ont besoin donc on le met dans le parent commun
+
+3. Pourquoi ProductCard ne modifie pas directement selectedProduct ?
+Parce que le state appartient a App et lenfant appelle juste une fonction du parent
+
+4. A quoi sert setSelectedProduct ?
+A changer la valeur de selectedProduct
+
+5. Pourquoi passe-t-on une fonction en props ?
+Pour que lenfant puisse declencher une action dans le parent
+
+6. Que fait showDetails && ProductDetails ?
+Elle affiche ProductDetails seulement si showDetails vaut true
+
+7. Pourquoi favoriteProductId est initialise a null ?
+Parce que au depart aucun produit nest favori
