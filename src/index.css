@@ -96,3 +96,46 @@ main {
 .product-actions {
   margin-top: 12px;
 }
+
+.cart {
+  margin-top: 40px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.cart ul {
+  padding-left: 20px;
+}
+
+.cart li {
+  margin-bottom: 10px;
+}
+
+.cart button,
+.order-form button {
+  margin-left: 10px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.order-form {
+  margin-top: 20px;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-form input {
+  margin-left: 10px;
+  padding: 6px;
+}
+
+.quantity {
+  margin: 0 6px;
+  min-width: 20px;
+  display: inline-block;
+  text-align: center;
+}
